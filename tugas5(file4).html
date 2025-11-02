@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran Sukarelawan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Memastikan padding dan border tidak menambah lebar elemen */
+        }
+
+        .form-group select {
+            height: 34px;
+        }
+
+        .form-group .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group .checkbox-group label {
+            font-weight: normal;
+            margin-bottom: 3px;
+        }
+
+        .form-group input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-inline {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-inline .form-group {
+            width: 48%; /* Sedikit kurang dari 50% untuk memberikan ruang antar elemen */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulir Pendaftaran Sukarelawan</h2>
+        <p>Silakan isi formulir berikut untuk menjadi sukarelawan.</p>
+        <form action="#" method="post">
+            <div class="form-inline">
+                <div class="form-group">
+                    <label for="firstName">Nama Depan:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Nama Belakang:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Alamat Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Nomor Telepon:</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Tanggal Lahir:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="volunteerRole">Peran Sukarelawan yang Disukai:</label>
+                <select id="volunteerRole" name="volunteerRole">
+                    <option value="">Pilih peran sukarelawan</option>
+                    <option value="pengajaran">Pengajaran</option>
+                    <option value="administrasi">Administrasi</option>
+                    <option value="acara">Acara</option>
+                    <!-- Tambahkan opsi peran lain sesuai kebutuhan -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Ketersediaan</label>
+                <label>Hari yang Tersedia:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="daysAvailable" value="senin">Senin</label>
+                    <label><input type="checkbox" name="daysAvailable" value="selasa">Selasa</label>
+                    <label><input type="checkbox" name="daysAvailable" value="rabu">Rabu</label>
+                    <label><input type="checkbox" name="daysAvailable" value="kamis">Kamis</label>
+                    <label><input type="checkbox" name="daysAvailable" value="jumat">Jumat</label>
+                    <label><input type="checkbox" name="daysAvailable" value="sabtu">Sabtu</label>
+                    <label><input type="checkbox" name="daysAvailable" value="minggu">Minggu</label>
+                </div>
+            </div>
+            <div class="form-inline">
+                 <div class="form-group">
+                    <label for="startTime">Waktu Mulai Tersedia:</label>
+                    <input type="time" id="startTime" name="startTime" value="09:00">
+                </div>
+                <div class="form-group">
+                    <label for="endTime">Waktu Selesai Tersedia:</label>
+                    <input type="time" id="endTime" name="endTime" value="17:00">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="skills">Keterampilan dan Pengalaman:</label>
+                <textarea id="skills" name="skills" rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Minat:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="interests" value="animals">Hewan</label>
+                    <label><input type="checkbox" name="interests" value="children">Anak-anak</label>
+                    <label><input type="checkbox" name="interests" value="elderly">Lansia</label>
+                    <label><input type="checkbox" name="interests" value="environment">Lingkungan</label>
+                    <label><input type="checkbox" name="interests" value="health">Kesehatan</label>
+                    <label><input type="checkbox" name="interests" value="homelessness">Tunawisma</label>
+                    <label><input type="checkbox" name="interests" value="poverty">Kemiskinan</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="terms" value="agree" required>
+                    Saya setuju dengan syarat dan ketentuan program sukarelawan.
+                </label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
